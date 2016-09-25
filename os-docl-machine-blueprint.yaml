@@ -201,6 +201,12 @@ node_templates:
             script_path: upload_docker_image.sh
             fabric_env: *manager_fabric_env
           executor: host_agent
+        upload_manager_logs:
+          implementation: fabric.fabric_plugin.tasks.run_script
+          inputs:
+            script_path: upload_manager_logs.sh
+            fabric_env: *manager_fabric_env
+          executor: host_agent
 
 outputs:
   docl_machine_ip:
